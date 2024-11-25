@@ -1,27 +1,29 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["flowers"])){
- $_SESSION['flowers'] = [
-    [
-    'name' => 'Hoa Hồng',
-     'description' => 'Loài hoa mang vẻ đẹp kiêu sa, biểu tượng của tình yêu.',
-      'image' => 'images/hoacamchuong.webp'
-    ],
-    [
-        'name' => 'Hoa Lan',
-        'description' => 'Biểu tượng của sự sang trọng, tinh tế.',
-        'image' => 'images/hoadongtien.webp'
-    ],
-    [
-        'name' => 'Hoa Lan',
-        'description' => 'Biểu tượng của sự sang trọng, tinh tế.',
-        'image' => 'images/hoagiay.webp'
-    ],
- ];
-}
+// if(!isset($_SESSION["flowers"])){
+//  $_SESSION['flowers'] = [
+//     [
+//     'name' => 'Hoa Hồng',
+//      'description' => 'Loài hoa mang vẻ đẹp kiêu sa, biểu tượng của tình yêu.',
+//       'image' => 'images/hoacamchuong.webp'
+//     ],
+//     [
+//         'name' => 'Hoa Lan',
+//         'description' => 'Biểu tượng của sự sang trọng, tinh tế.',
+//         'image' => 'images/hoadongtien.webp'
+//     ],
+//     [
+//         'name' => 'Hoa Lan',
+//         'description' => 'Biểu tượng của sự sang trọng, tinh tế.',
+//         'image' => 'images/hoagiay.webp'
+//     ],
+//  ];
+// }
 
-$flowers = $_SESSION['flowers']
+$flowers = $_SESSION['flowers'] ?? [];
+
+// $flowers = $_SESSION['flowers']
 ?>
 
 <!DOCTYPE html>
