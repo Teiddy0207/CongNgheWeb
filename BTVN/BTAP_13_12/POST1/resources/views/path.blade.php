@@ -1,0 +1,1 @@
+resources/views/path.blade.php
