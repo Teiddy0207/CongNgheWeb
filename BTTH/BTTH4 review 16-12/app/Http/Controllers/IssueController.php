@@ -34,11 +34,7 @@ class IssueController extends Controller
         return redirect()->route('issues.index')->with('success', 'van de dc them');    
     }
 
-    // public function show($id)
-    // {
-    //     $issue = Issue::find($id);
-    //     return view('issues.show', compact('issue'));
-    // }
+
 
     public function destroy($id)
     {
@@ -75,5 +71,11 @@ class IssueController extends Controller
         return redirect()-> route('issues.index') -> with('success', 'van de da duoc cap nhat');
 
 
+    }
+
+    public function show($id)
+    {
+        $issue = Issue::findOrFail($id);
+        return view('issues.show', compact('issue'));
     }
 }

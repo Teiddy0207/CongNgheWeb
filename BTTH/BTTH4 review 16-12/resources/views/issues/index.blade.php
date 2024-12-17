@@ -217,7 +217,7 @@ table.table .avatar {
 									{{ $issue->status }}
 								</span>
 							</td>
-                            <td>
+                            <td class = "d-flex">
                                 <a href="{{ route('issues.edit', $issue->id) }}"><button type="button" class="btn btn-primary">Sửa</button></a>
         
                    
@@ -227,6 +227,9 @@ table.table .avatar {
 									@method('DELETE')
 									<button type="submit" class="btn btn-danger">Xóa</button>
 								</form>
+
+								<a href="{{route('issues.show', $issue->id) }}" ><button type="button" class="btn btn-info">Xem </button></a>
+
                             </td>
                         </tr>
                     @endforeach

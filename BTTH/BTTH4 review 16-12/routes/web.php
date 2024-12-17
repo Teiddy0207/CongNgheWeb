@@ -11,8 +11,6 @@ Route::get('/issues/create', [IssueController::class, 'create'])->name('issues.c
 // Route để lưu vấn đề mới
 Route::post('/issues', [IssueController::class, 'store'])->name('issues.store');
 
-// Route để hiển thị chi tiết một vấn đề (nếu cần)
-// Route::get('/issues/{id}', [IssueController::class, 'show'])->name('issues.show');
 
 // Route để xóa vấn đề
 Route::delete('/issues/{id}', [IssueController::class, 'destroy'])->name('issues.destroy');
@@ -22,3 +20,8 @@ Route::get('/issues/{id}/edit', [IssueController::class, 'edit'])->name('issues.
 
 // Route để cập nhật vấn đề
 Route::put('/issues/{id}', [IssueController::class, 'update'])->name('issues.update');
+
+
+
+// Route để hiển thị chi tiết một vấn đề (nếu cần)
+Route::get('/issues/{id}', [IssueController::class, 'show'])->name('issues.show');
