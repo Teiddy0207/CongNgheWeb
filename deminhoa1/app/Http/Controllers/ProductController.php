@@ -81,4 +81,11 @@ public function destroy($id)
 
     return redirect()->route('products.index')->with('success', 'van de co ma: ' . $product->id . 'da duoc xoa thanh cong!');
 }
+
+public function show($id)
+{
+    $product = Product::findOrFail($id);
+    $store = Store::all();
+    return view('products.show', compact('product','store'));
+}
 }

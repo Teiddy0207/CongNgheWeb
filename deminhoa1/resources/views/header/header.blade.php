@@ -16,10 +16,10 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Computer Issues</b></h2>
+                    <h2>Manage <b>Products</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="{{ route('products.create') }}" class="btn btn-success">
+                    <a href="{{ route('products.create') }}" class="btn btn-success ">
                         <i class="fa-solid fa-plus"></i>
                         <span>Thêm vấn đề mới</span>
                     </a>                    

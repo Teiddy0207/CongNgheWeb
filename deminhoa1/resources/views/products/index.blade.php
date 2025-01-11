@@ -113,9 +113,7 @@
         color: #2196F3;
     }
 
-    table.table td a.edit {
-        color: #FFC107;
-    }
+  
 
     table.table td a.delete {
         color: #F44336;
@@ -149,7 +147,9 @@
                 <th>Description</th>
                 <th>Price</th>
                 <th>Store</th>
+                <th>picture</th>
                 <th>Actions</th>
+             
             </tr>
         </thead>
         <tbody>
@@ -160,7 +160,7 @@
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->store->name }}</td>
-                    <td>
+                    <td class = "d-flex">
                         <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning edit">Edit</a>
                         <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline;"
                             onsubmit="return confirm('Are you sure?');">
@@ -168,6 +168,7 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger delete">Delete</button>
                         </form>
+                        <a href="{{ route('products.show', $product->id) }}" ><button class="btn btn-success">Show</button></a>
                     </td>
                 </tr>
             @endforeach
